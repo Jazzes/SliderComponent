@@ -1,1 +1,1 @@
-# taskOnly
+# Technical task
