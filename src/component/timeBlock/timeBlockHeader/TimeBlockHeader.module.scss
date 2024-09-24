@@ -1,0 +1,44 @@
+@import "../../../templates/css/mediaMixin";
+
+.header {
+  font-size: 5.6rem;
+  color: rgba(66, 86, 122, 1);
+  font-weight: 700;
+  width: 360px;
+  position: relative;
+  z-index: 1;
+
+  @include _1280 {
+    font-size: 4rem;
+    width: 300px;
+  }
+
+  @include _960 {
+    font-size: 3rem;
+    width: 240px;
+  }
+
+  @include _640 {
+    font-size: 2rem;
+    padding-left: 0;
+    width: 140px;
+  }
+}
+
+.header::before{
+  content: "";
+  position: absolute;
+  left: -80px;
+  height: 100%;
+  width: 5px;
+  background: linear-gradient(rgba(56, 119, 238, 1), rgba(239, 93, 168, 1));
+
+  @include _1280{
+    left: -40px;
+  }
+
+  @include _640 {
+    content: none;
+    display: none;
+  }
+}

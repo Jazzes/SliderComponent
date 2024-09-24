@@ -1,0 +1,51 @@
+@import "../../templates/css/mediaMixin";
+
+.mainContainer{
+  background: #F4F5F9;
+}
+
+.container {
+  position: relative;
+  width: 1440px;
+  min-height: max(100vh, 800px);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0 auto;
+  border-left: 1px solid rgba(66, 86, 122, 0.1);
+  border-right: 1px solid rgba(66, 86, 122, 0.1);
+  padding: 40px 80px 20px;
+
+  @include _1600{
+    width: 1200px;
+  }
+
+  @include _1280{
+    width: 900px;
+    padding: 40px 60px 20px;
+    min-height: max(100vh, 700px);
+  }
+
+  @include _960{
+    width: 600px;
+    min-height: max(100vh, 640px);
+
+  }
+
+  @include _640{
+    width: 100%;
+    margin: 0;
+    padding: 30px 20px 20px;
+    min-height: auto;
+  }
+}
+
+.reverseBlock{
+  z-index: 1;
+
+  @include _640{
+      display: flex;
+      flex-direction: column-reverse;
+  }
+}
+

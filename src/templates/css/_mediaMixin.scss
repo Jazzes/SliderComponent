@@ -1,0 +1,36 @@
+@mixin _1600 {
+  @media (max-width: 1600px){
+    @content;
+  }
+}
+
+@mixin _1280 {
+  @media (max-width: 1280px){
+    @content;
+  }
+}
+
+@mixin _960 {
+  @media (max-width: 960px){
+    @content;
+  }
+}
+
+@mixin _640 {
+  @media (max-width: 640px){
+    @content;
+  }
+}
+
+@mixin _hover{
+  @media (hover: hover){
+    &:hover {
+      @content
+    }
+  }
+  @media (hover: none) {
+    &:active {
+      @content
+    }
+  }
+}

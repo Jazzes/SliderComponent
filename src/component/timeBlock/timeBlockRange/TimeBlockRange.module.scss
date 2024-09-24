@@ -1,0 +1,52 @@
+@import "../../../templates/css/mediaMixin";
+
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+
+  @include _640(){
+    top: auto;
+    left: auto;
+    position: static;
+    transform: none;
+    margin-top: 40px;
+  }
+}
+
+.firstYear{
+  color: #5D5FEF;
+  @include _640{
+    color: #3877EE;
+  }
+}
+.lastYear{
+  color: #EF5DA8;
+  @include _640{
+    color: #F178B6;
+  }
+}
+
+.firstYear, .lastYear{
+  font-size: 20rem;
+  font-weight: 700;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+
+  @include _1280{
+    font-size: 12rem;
+  }
+
+  @include _960{
+    font-size: 8rem;
+  }
+
+  @include _640{
+    font-size: 5.6rem;
+  }
+}
+

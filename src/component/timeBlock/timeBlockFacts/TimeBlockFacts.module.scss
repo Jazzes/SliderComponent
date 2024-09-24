@@ -1,0 +1,141 @@
+@import "../../../templates/css/mediaMixin";
+
+.container {
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
+  z-index: 1;
+
+  @include _960 {
+    margin-top: 30px;
+  }
+  @include _640 {
+    margin-top: 40px;
+  }
+}
+
+.headerPeriod {
+  display: none;
+  color: #42567A;
+  font-size: 16px;
+  font-weight: 700;
+
+  @include _640 {
+    display: block;
+  }
+}
+
+.separatorBlock {
+  margin-top: 20px;
+  width: 100%;
+  height: 1px;
+  background: #C7CDD9;
+  margin-bottom: 20px;
+  display: none;
+  @include _640 {
+    display: block;
+  }
+}
+
+.year {
+  color: #3877EE;
+  font-size: 2.5rem;
+  font-family: "Bebas Neue", sans-serif;
+  @include _1280 {
+    font-size: 2rem;
+  }
+
+  @include _640 {
+    font-size: 1.6rem;
+  }
+}
+
+.description {
+  color: #42567A;
+  font-size: 2rem;
+  margin-top: 15px;
+  height: 150px;
+
+  @include _1280 {
+    font-size: 1.8rem;
+  }
+
+  @include _640{
+    font-size: 1.4rem;
+
+  }
+}
+
+.swiperPrev {
+  left: -60px;
+
+  @include _1280 {
+    left: -50px;
+  }
+}
+
+.swiperNext {
+  right: -60px;
+
+  @include _1280 {
+    right: -50px;
+  }
+}
+
+.swiperNext, .swiperPrev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 15px rgba(56, 119, 238, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+
+  @include _640 {
+    display: none;
+  }
+}
+
+.swiperArrowHidden {
+  display: none;
+}
+
+.swiperPagination {
+  width: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  justify-content: center;
+  bottom: -40px;
+  position: absolute;
+  z-index: 2;
+
+  @include _640{
+    display: flex;
+  }
+}
+
+.swiperPaginationDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(66, 86, 122, 0.4) content-box;
+  padding: 5px;
+}
+
+.swiperPaginationDotActive {
+  background: rgba(66, 86, 122, 1) content-box;
+}
+
+.almostShowedNextSlide {
+  @include _640 {
+    opacity: 0.4;
+  }
+}
